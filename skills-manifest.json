@@ -363,6 +363,17 @@
       "install_each_subdir": true,
       "description": "HACK.SKILLS — 102 security skills across 14 domains (web sec, API sec, auth, OS privesc, AD attacks, mobile, binary exploitation/Pwn, reverse engineering, crypto attacks, blockchain/smart contracts, AI/ML security, network protocols/pivoting, digital forensics). Sources: PayloadsAllTheThings, HackTricks, ctf-wiki. For bug bounty, CTF, authorized pentest.",
       "priority": 80
+    },
+    {
+      "name": "unity-mcp",
+      "url": "https://github.com/IvanMurzak/Unity-MCP.git",
+      "branch": "main",
+      "prefix": "unity-mcp-",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "unity-mcp",
+      "description": "Unity MCP — AI-powered game development assistant for Unity Editor & Runtime. 70+ tools: create GameObjects, materials, shaders, scripts, scenes, prefabs. Profiling, screenshots, runtime AI. Works with Claude, Cursor, Copilot, Gemini. Extensions: Animation, Cinemachine, Navigation, ProBuilder, Terrain, Tilemap, Timeline.",
+      "priority": 70
     }
   ]
 }
