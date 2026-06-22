@@ -353,6 +353,16 @@
       "filter": "has SKILL.md",
       "description": "PinMe — zero-config frontend deployment",
       "priority": 50
+    },
+    {
+      "name": "hack-skills",
+      "url": "https://github.com/yaklang/hack-skills.git",
+      "branch": "main",
+      "prefix": "hack-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "HACK.SKILLS — 102 security skills across 14 domains (web sec, API sec, auth, OS privesc, AD attacks, mobile, binary exploitation/Pwn, reverse engineering, crypto attacks, blockchain/smart contracts, AI/ML security, network protocols/pivoting, digital forensics). Sources: PayloadsAllTheThings, HackTricks, ctf-wiki. For bug bounty, CTF, authorized pentest.",
+      "priority": 80
     }
   ]
 }
