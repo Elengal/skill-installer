@@ -374,6 +374,116 @@
       "target_name": "unity-mcp",
       "description": "Unity MCP — AI-powered game development assistant for Unity Editor & Runtime. 70+ tools: create GameObjects, materials, shaders, scripts, scenes, prefabs. Profiling, screenshots, runtime AI. Works with Claude, Cursor, Copilot, Gemini. Extensions: Animation, Cinemachine, Navigation, ProBuilder, Terrain, Tilemap, Timeline.",
       "priority": 70
+    },
+    {
+      "name": "claude-code-game-studios",
+      "url": "https://github.com/donchitos/claude-code-game-studios.git",
+      "branch": "main",
+      "prefix": "gamestudio-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Claude Code Game Studios — 49 AI agents + 72 workflow skills = full game dev studio. Agents: Game Designer, Level Designer, Artist, Audio Engineer, QA, Producer, etc. Mirrors real studio hierarchy.",
+      "priority": 75
+    },
+    {
+      "name": "ai-game-art-pipeline",
+      "url": "https://github.com/ybuild-ai/ai-game-art-pipeline-skill.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "ai-game-art-pipeline",
+      "description": "AI Game Art Pipeline — plan, generate, clean, package, QA game-runtime art assets. Sprites, icons, backgrounds, video-to-frames animation. Generates prompts for AI image gen + post-processing.",
+      "priority": 80
+    },
+    {
+      "name": "godot-claude-skills",
+      "url": "https://github.com/Randroids-Dojo/Godot-Claude-Skills.git",
+      "branch": "main",
+      "prefix": "godot-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Godot Engine Claude Skills — GDScript, scenes, nodes, shaders, game patterns for Godot 4.x.",
+      "priority": 70
+    },
+    {
+      "name": "godot-claude-skills-alexmeckes",
+      "url": "https://github.com/alexmeckes/godot-claude-skills.git",
+      "branch": "main",
+      "prefix": "godot-am-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Godot Claude Skills (alexmeckes) — workflow skills for Godot 4.x, complements godot-mcp.",
+      "priority": 65
+    },
+    {
+      "name": "godot-prompter",
+      "url": "https://github.com/jame581/GodotPrompter.git",
+      "branch": "main",
+      "prefix": "godot-prompter-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "GodotPrompter — agentic skills framework for Godot 4.x. GDScript + C# expertise.",
+      "priority": 65
+    },
+    {
+      "name": "vibe-gamedev",
+      "url": "https://github.com/ryholmdahl/vibe-gamedev.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "vibe-gamedev",
+      "description": "VibeGameDev — Unity vibecoding tool. JSON-based AI workflow for Unity game development.",
+      "priority": 60
+    },
+    {
+      "name": "vibejam-starter-pack",
+      "url": "https://github.com/chongdashu/vibejam-starter-pack.git",
+      "branch": "main",
+      "prefix": "vibejam-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Vibe Jam starter pack — ThreeJS game templates + Claude Code agent skills for fast game jams.",
+      "priority": 60
+    },
+    {
+      "name": "ai-game-spritesheets",
+      "url": "https://github.com/chongdashu/ai-game-spritesheets.git",
+      "branch": "main",
+      "prefix": "spritesheet-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "AI Game Spritesheets — GPT Image 2.0 + Seedance pipeline for animated game sprites.",
+      "priority": 65
+    },
+    {
+      "name": "claude-design-skills",
+      "url": "https://github.com/freshtechbro/claudedesignskills.git",
+      "branch": "main",
+      "prefix": "design-",
+      "source_path": ".claude/skills",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Claude Design Skills — 3D graphics, animation, Blender web pipeline, Three.js, interactive web experiences.",
+      "priority": 65
+    },
+    {
+      "name": "godogen",
+      "url": "https://github.com/htdt/godogen.git",
+      "branch": "main",
+      "prefix": "godogen-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "GodoGen — autonomous game development for Godot, Bevy, Babylon.js with Claude Code and Codex.",
+      "priority": 60
     }
   ]
 }
