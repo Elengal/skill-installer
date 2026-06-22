@@ -1,0 +1,358 @@
+{
+  "$schema": "https://elengal.github.io/skill-installer/schema.json",
+  "version": "1.0.0",
+  "updated": "2026-06-22",
+  "description": "Manifest of skill collections to install. Each entry clones from upstream and installs to the target directory. The installer skips already-installed skills (unless --force).",
+  "target_dir": "/home/z/my-project/skills",
+  "repos": [
+    {
+      "name": "anthropic-official",
+      "url": "https://github.com/anthropics/skills.git",
+      "branch": "main",
+      "prefix": "anthropic-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Anthropic official skills (frontend-design, docx, pdf, pptx, xlsx, mcp-builder, skill-creator, webapp-testing, canvas-design, brand-guidelines, theme-factory, internal-comms, doc-coauthoring, algorithmic-art, slack-gif-creator, web-artifacts-builder, claude-api)",
+      "priority": 100
+    },
+    {
+      "name": "openai-official",
+      "url": "https://github.com/openai/skills.git",
+      "branch": "main",
+      "prefix": "openai-",
+      "source_path": "skills/.curated",
+      "install_each_subdir": true,
+      "description": "OpenAI official skills (yeet, gh-fix-ci, gh-address-comments, security-*, figma-*, notion-*, deploy-*, transcribe, speech, etc.)",
+      "priority": 100
+    },
+    {
+      "name": "vercel-official",
+      "url": "https://github.com/vercel-labs/agent-skills.git",
+      "branch": "main",
+      "prefix": "vercel-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "skip": ["*.zip"],
+      "description": "Vercel official skills (react-best-practices, web-design-guidelines, deploy-to-vercel, etc.)",
+      "priority": 95
+    },
+    {
+      "name": "supabase-official",
+      "url": "https://github.com/supabase/agent-skills.git",
+      "branch": "main",
+      "prefix": "supabase-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Supabase official skills (supabase, supabase-postgres-best-practices)",
+      "priority": 95
+    },
+    {
+      "name": "sentry-official",
+      "url": "https://github.com/getsentry/sentry-skills.git",
+      "branch": "main",
+      "prefix": "sentry-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Sentry official skills (code-review, find-bugs, security-review, pr-writer, etc.)",
+      "priority": 90
+    },
+    {
+      "name": "kepano-obsidian",
+      "url": "https://github.com/kepano/obsidian-skills.git",
+      "branch": "main",
+      "prefix": "kepano-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Obsidian skills from creator of Obsidian (obsidian-markdown, obsidian-cli, obsidian-bases, json-canvas, defuddle)",
+      "priority": 80
+    },
+    {
+      "name": "hashicorp-official",
+      "url": "https://github.com/hashicorp/agent-skills.git",
+      "branch": "main",
+      "prefix": "hashicorp-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "description": "HashiCorp official skills (terraform, packer, scripts)",
+      "priority": 85
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "src/ui-ux-pro-max",
+      "install_each_subdir": false,
+      "target_name": "ui-ux-pro-max",
+      "description": "UI/UX Pro Max — design system generator (161 rules, 67 styles, 161 palettes, 57 font pairings)",
+      "priority": 90
+    },
+    {
+      "name": "superskills-ariadoss",
+      "url": "https://github.com/ariadoss/superskills.git",
+      "branch": "main",
+      "prefix": "superskills-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Superskills by ariadoss (tdd, debug, pentest, fuzz, perf-profile, qa-full, daily-qa, web-perf, etc.)",
+      "priority": 75
+    },
+    {
+      "name": "awesome-claude-code-toolkit",
+      "url": "https://github.com/rohitg00/awesome-claude-code-toolkit.git",
+      "branch": "main",
+      "prefix": "toolkit-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Awesome Claude Code Toolkit (40 skills: accessibility-wcag, agentkit-seo, api-design-patterns, aws-cloud-patterns, ci-cd-pipelines, etc.)",
+      "priority": 75
+    },
+    {
+      "name": "claude-code-superpowers",
+      "url": "https://github.com/TechyMT/claude-code-superpowers.git",
+      "branch": "main",
+      "prefix": "superpowers-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Claude Code Superpowers (16 skills: async-concurrency, build-tool-factory, domain-model, error-handling, hot-paths, etc.)",
+      "priority": 70
+    },
+    {
+      "name": "superartes",
+      "url": "https://github.com/andybrandt/superartes.git",
+      "branch": "main",
+      "prefix": "artes-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Superartes (17 skills: brainstorming, commit-message, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, gemini-review, etc.)",
+      "priority": 75
+    },
+    {
+      "name": "agent-skills-peterhdd",
+      "url": "https://github.com/PeterHdd/agent-skills.git",
+      "branch": "main",
+      "prefix": "agent-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Agent Skills (9 engineering roles: backend-architect, frontend-developer, devops-automator, ml-engineer, etc.)",
+      "priority": 65
+    },
+    {
+      "name": "claude-skills-kevinchamplin",
+      "url": "https://github.com/Kevinchamplin/claude-skills.git",
+      "branch": "main",
+      "prefix": "kc-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Kevinchamplin claude-skills (8 skills: ai-commercial, frontend-design, intro-trailer, lean-context, review, superteam, token-discipline, ux-designer)",
+      "priority": 70
+    },
+    {
+      "name": "artubss-skills",
+      "url": "https://github.com/artubss/SKILLS-CLAUDE-CODE.git",
+      "branch": "main",
+      "prefix": "artubss-",
+      "source_path": "skills/skills",
+      "install_each_subdir": true,
+      "description": "Artubss SKILLS-CLAUDE-CODE — large collection (832 skills across 26 categories: development, scientific, ai-research, business-marketing, productivity, security, creative-design, etc.)",
+      "priority": 60
+    },
+    {
+      "name": "artubss-favorites",
+      "url": "https://github.com/artubss/SKILLS-CLAUDE-CODE.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "favorites",
+      "install_each_subdir": false,
+      "target_name": "_favorites",
+      "description": "Artubss favorites — premium templates (144 skills)",
+      "priority": 50
+    },
+    {
+      "name": "artubss-plugins",
+      "url": "https://github.com/artubss/SKILLS-CLAUDE-CODE.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "claude-skills-main/claude-skills-main/plugins",
+      "install_each_subdir": false,
+      "target_name": "_plugins",
+      "description": "Artubss plugins (Cloudflare, design-assets, dev-tools) — 65 skills",
+      "priority": 50
+    },
+    {
+      "name": "agnix",
+      "url": "https://github.com/avifenesh/agnix.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "agnix",
+      "description": "Agnix — linter for AI configs (SKILL.md, CLAUDE.md, MCP) with 156 rules",
+      "priority": 85
+    },
+    {
+      "name": "vibesec",
+      "url": "https://github.com/BehiSecc/VibeSec-Skill.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "vibesec",
+      "description": "VibeSec — real-time security during vibe-coding (XSS, SQLi, IDOR, SSRF prevention)",
+      "priority": 85
+    },
+    {
+      "name": "composio-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills.git",
+      "branch": "main",
+      "prefix": "composio-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Composio awesome-claude-skills (28 skills: content-research-writer, twitter-algorithm-optimizer, meeting-insights-analyzer, mcp-builder, skill-creator, slack-gif-creator, theme-factory, webapp-testing, etc.)",
+      "priority": 70
+    },
+    {
+      "name": "glebis-skills",
+      "url": "https://github.com/glebis/claude-skills.git",
+      "branch": "main",
+      "prefix": "glebis-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Glebis claude-skills (94 skills: context-builder, gpt-image-2, telegram, tdd, pdf-generation, recording, sketch, deep-research, etc.)",
+      "priority": 65
+    },
+    {
+      "name": "infrasity-skills",
+      "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills.git",
+      "branch": "main",
+      "prefix": "infrasity-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "description": "Infrasity dev-gtm skills (10 skills: api-docs-quality-report, blog-post-counter, brief-outline-generator, dev-marketing-prospector, docs-auditor, growth-report, etc.)",
+      "priority": 60
+    },
+    {
+      "name": "coreyhaines-marketing",
+      "url": "https://github.com/coreyhaines31/marketingskills.git",
+      "branch": "main",
+      "prefix": "coreyhaines-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "description": "Coreyhaines marketing skills (45 skills: programmatic SEO, cold email, etc.)",
+      "priority": 50
+    },
+    {
+      "name": "rushik-skills",
+      "url": "https://github.com/Rushik-Ghuntala/claude-code-skills.git",
+      "branch": "main",
+      "prefix": "rushik-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "target_name": "rushik-skills",
+      "description": "Rushik claude-code-skills (11 skills: viral-hook-generator, x-content-strategy, etc.)",
+      "priority": 50
+    },
+    {
+      "name": "agryoutube-youtube",
+      "url": "https://github.com/AgriciDaniel/claude-youtube.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "agryoutube-youtube-consultant",
+      "description": "YouTube consultant (audit, SEO, retention, hooks, covers, Shorts, monetization — 14 sub-skills)",
+      "priority": 60
+    },
+    {
+      "name": "agryoutube-blog",
+      "url": "https://github.com/AgriciDaniel/claude-blog.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "agryoutube-blog-ecosystem",
+      "description": "Blog ecosystem (28 sub-skills: write, rewrite, audit, calendar, fact-check, schema, translate)",
+      "priority": 60
+    },
+    {
+      "name": "linkedin-skills",
+      "url": "https://github.com/Linked-API/linkedin-skills.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "linkedin-skills",
+      "description": "LinkedIn automation via Linked API",
+      "priority": 50
+    },
+    {
+      "name": "alexskuznetsov-telegram",
+      "url": "https://github.com/AlexSKuznetsov/claude-skill-telegram.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "alexskuznetsov-telegram",
+      "description": "Telegram notifications and reminders from Claude",
+      "priority": 50
+    },
+    {
+      "name": "seedprod-daily-brief",
+      "url": "https://github.com/seedprod/claude-code-telegram.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "seedprod-daily-brief",
+      "description": "Daily brief to Telegram (template)",
+      "priority": 50
+    },
+    {
+      "name": "sociilabs-content-writer",
+      "url": "https://github.com/sociilabs/claude-content-writer.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "sociilabs-content-writer",
+      "description": "Content writer — 5-step workflow (discuss → plan → execute → verify → ship) with AI-detector + SEO check",
+      "priority": 55
+    },
+    {
+      "name": "oiloil-ui-ux-guide",
+      "url": "https://github.com/oil-oil/oiloil-ui-ux-guide.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "oiloil-ui-ux-guide",
+      "description": "UI/UX guide — CRAP, task-first UX, HCI laws, interaction psychology, modern minimal style",
+      "priority": 75
+    },
+    {
+      "name": "raintree-claude-starter",
+      "url": "https://github.com/raintree-technology/claude-starter.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "",
+      "install_each_subdir": false,
+      "target_name": "raintree-claude-starter",
+      "description": "Claude starter template (40 skills across 8 domains, TOON format, Zig encoder)",
+      "priority": 40
+    },
+    {
+      "name": "glitternetwork-pinme",
+      "url": "https://github.com/glitternetwork/skills.git",
+      "branch": "main",
+      "prefix": "glitternetwork-",
+      "source_path": "",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "PinMe — zero-config frontend deployment",
+      "priority": 50
+    }
+  ]
+}
