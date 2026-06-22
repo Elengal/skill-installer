@@ -1,0 +1,14 @@
+{
+  "name": "skill-dispatcher",
+  "description": "Meta-skill that helps choose the right skill for the current task. Use whenever you're about to start non-trivial work and need to decide which skill(s) to apply, OR when multiple overlapping skills could fit.",
+  "version": "1.0.0",
+  "author": "Zaya (built with anthropic-skill-creator)",
+  "category": "meta",
+  "triggers": [
+    "which skill",
+    "what skill should",
+    "before starting work",
+    "multiple skills",
+    "skill should I use"
+  ]
+}

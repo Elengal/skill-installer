@@ -1,0 +1,61 @@
+{
+  "skill_name": "skill-dispatcher",
+  "evals": [
+    {
+      "id": 1,
+      "name": "code-review-request",
+      "prompt": "Review my recent commits for any bugs or security issues",
+      "expected_output": "Should dispatch to kc-review (or toolkit-security-hardening if user mentioned security). Should NOT pick minimalist-review (business), verify (claims), or artes-systematic-debugging (known bugs only). Should announce skill choice before doing the work.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "build-landing-page",
+      "prompt": "Make me a landing page for my new SaaS startup",
+      "expected_output": "Should dispatch to ui-ux-pro-max (design system) + anthropic-frontend-design (principles) for Plan phase, then kc-frontend-design or fullstack-dev for Build phase. Should announce multi-phase skill chain.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "debug-crash",
+      "prompt": "My Electron app crashes with exception code 0x80000003 on launch, help me fix it",
+      "expected_output": "Should dispatch to artes-systematic-debugging (root cause first). Should NOT immediately propose fixes. Should announce Iron Law: NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "add-postgres-index",
+      "prompt": "Add an index to my Postgres users table to speed up email lookups",
+      "expected_output": "Should dispatch to toolkit-postgres-optimization (specific) over db-optimize (general) over toolkit-database-optimization (broader). Specificity wins.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "make-pdf-report",
+      "prompt": "Create a PDF report from this CSV data with charts",
+      "expected_output": "Should dispatch to charts (for visualization) then anthropic-pdf or pdf (for file generation). Multi-skill chain in correct order.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "ambiguous-which-skill",
+      "prompt": "Which skill should I use to optimize my database?",
+      "expected_output": "Should ask clarifying question (which DB? Postgres/Redis/MySQL?) OR present 2-3 options with tradeoffs. Should NOT just pick one without context.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "trivial-task",
+      "prompt": "Fix this typo: 'recieve' should be 'receive'",
+      "expected_output": "Should NOT use any skill. Should state 'I'll do this from scratch because it's a trivial fix' and just do it.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "multi-phase-feature",
+      "prompt": "Add user authentication with JWT to my Next.js app",
+      "expected_output": "Should identify multiple phases: Plan (auth design) + Build (implement) + Test (verify auth works) + Review (security check). Should chain: writing-plans or toolkit-authentication-patterns → fullstack-dev → toolkit-testing-strategies → toolkit-security-hardening.",
+      "files": []
+    }
+  ]
+}

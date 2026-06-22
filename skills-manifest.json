@@ -4,6 +4,14 @@
   "updated": "2026-06-22",
   "description": "Manifest of skill collections to install. Each entry clones from upstream and installs to the target directory. The installer skips already-installed skills (unless --force).",
   "target_dir": "/home/z/my-project/skills",
+  "local_skills": [
+    {
+      "name": "skill-dispatcher",
+      "source": "skills/skill-dispatcher",
+      "description": "Meta-skill that helps choose the right skill for the current task. Classify phase → lookup catalog → announce choice → apply → reflect. Includes subagent dispatch patterns for parallel skill execution.",
+      "priority": 100
+    }
+  ],
   "repos": [
     {
       "name": "anthropic-official",

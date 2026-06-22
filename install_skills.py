@@ -227,15 +227,56 @@ def main():
     target_dir = args.target or manifest.get("target_dir", "/home/z/my-project/skills")
     Path(target_dir).mkdir(parents=True, exist_ok=True)
 
+    # ── Install local skills first (from this repo, not cloned) ──
+    local_skills = manifest.get("local_skills", [])
+    if local_skills:
+        local_skills.sort(key=lambda r: r.get("priority", 50), reverse=True)
+        log(c(f"\n{'='*70}", C.CYAN))
+        log(c(f"Installing {len(local_skills)} local skills → {target_dir}", C.CYAN + C.BOLD))
+        log(c(f"{'='*70}\n", C.CYAN))
+
+        for entry in local_skills:
+            name = entry["name"]
+            source = entry["source"]
+            src_path = manifest_path.parent / source
+
+            if not src_path.exists():
+                _print_result(name, "FAIL", f"Source not found: {source}", 0)
+                continue
+
+            dest = Path(target_dir) / name
+            if dest.exists() and not args.force:
+                _print_result(name, "SKIP", f"Already installed: {name}", 0)
+                continue
+
+            if args.dry_run:
+                _print_result(name, "DRY", f"Would install from {source}", 1)
+                continue
+
+            try:
+                if dest.exists():
+                    shutil.rmtree(dest)
+                shutil.copytree(src_path, dest)
+                _print_result(name, "OK", f"Installed from local: {source}", 1)
+            except Exception as e:
+                _print_result(name, "FAIL", f"Copy failed: {e}", 0)
+
     repos = manifest["repos"]
 
-    # Filter by --repo
+    # Filter by --repo (search both local_skills and repos)
     if args.repo:
+        # Check local skills first
+        local_match = [r for r in local_skills if r["name"] == args.repo]
         repos = [r for r in repos if r["name"] == args.repo]
-        if not repos:
+        if not repos and not local_match:
+            all_names = [r["name"] for r in local_skills] + [r["name"] for r in manifest["repos"]]
             log(c(f"Repo not found: {args.repo}", C.RED))
-            log(f"Available: {', '.join(r['name'] for r in manifest['repos'])}")
+            log(f"Available: {', '.join(all_names)}")
             sys.exit(1)
+        # If only local match, skip remote install
+        if local_match and not repos:
+            log(c(f"\nLocal skill '{args.repo}' installed. Skipping remote repos.", C.GREEN))
+            return
 
     # Sort by priority (highest first)
     repos.sort(key=lambda r: r.get("priority", 50), reverse=True)
@@ -243,8 +284,21 @@ def main():
     # List mode
     if args.list:
         log(c(f"\n{'='*70}", C.CYAN))
-        log(c(f"Skill Manifest — {len(repos)} repos", C.CYAN + C.BOLD))
+        log(c(f"Skill Manifest — {len(local_skills)} local + {len(repos)} repos", C.CYAN + C.BOLD))
         log(c(f"{'='*70}\n", C.CYAN))
+
+        # Local skills
+        if local_skills:
+            log(c("  Local Skills (from this repo):", C.MAGENTA + C.BOLD))
+            for r in local_skills:
+                log(f"    {c(r['name'], C.BOLD)} (priority {r.get('priority', 50)})")
+                log(f"      {c('Source:', C.BLUE)} {r['source']}")
+                if r.get('description'):
+                    log(f"      {c('Desc:', C.BLUE)} {r['description'][:100]}")
+                log()
+
+        # Remote repos
+        log(c("  Remote Repos (cloned from upstream):", C.MAGENTA + C.BOLD))
         for r in repos:
             log(f"  {c(r['name'], C.BOLD)} (priority {r.get('priority', 50)})")
             log(f"    {c('URL:', C.BLUE)} {r['url']}")
