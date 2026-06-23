@@ -385,6 +385,39 @@
       "priority": 80
     },
     {
+      "name": "pro-workflow-commands",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "commands",
+      "install_each_subdir": false,
+      "target_name": "proworkflow-commands",
+      "description": "Pro Workflow commands — 22 instruction files (/develop, /learn, /wrap-up, /deslop, /handoff, /doctor, /sprint-status, /mcp-audit, /parallel, /skill-optimize, /wiki). Used as knowledge base — main agent opens them directly to apply patterns.",
+      "priority": 88
+    },
+    {
+      "name": "pro-workflow-scripts",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "scripts",
+      "install_each_subdir": false,
+      "target_name": "proworkflow-scripts",
+      "description": "Pro Workflow hook scripts — 37 Node.js scripts for quality gates, git guards, secret scanning, commit validation. Main agent invokes them directly via node at appropriate moments (before commit, before push, before edit, etc.).",
+      "priority": 88
+    },
+    {
+      "name": "pro-workflow-hooks-config",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "hooks",
+      "install_each_subdir": false,
+      "target_name": "proworkflow-hooks-config",
+      "description": "Pro Workflow hooks.json — reference mapping of which script fires on which event (PreToolUse, PostToolUse, SessionStart, etc.). Used as documentation by main agent to decide when to invoke scripts manually.",
+      "priority": 70
+    },
+    {
       "name": "raintree-claude-starter",
       "url": "https://github.com/raintree-technology/claude-starter.git",
       "branch": "main",
