@@ -341,6 +341,50 @@
       "priority": 75
     },
     {
+      "name": "pro-workflow-skills",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "proworkflow-",
+      "source_path": "skills",
+      "install_each_subdir": true,
+      "filter": "has SKILL.md",
+      "description": "Pro Workflow (rohitg00, 2329 stars) — 35 battle-tested skills: context-engineering, agent-teams, parallel-worktrees, learn-rule, wrap-up, plan-interrogate, thoroughness-scoring, deslop, smart-commit, token-efficiency, llm-council, etc. Note: hooks/commands/SQLite store require Claude Code CLI; skills work as knowledge base.",
+      "priority": 90
+    },
+    {
+      "name": "pro-workflow-agents",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "agents",
+      "install_each_subdir": false,
+      "target_name": "proworkflow-agents",
+      "description": "Pro Workflow agents — 8 specialized subagent system prompts: context-engineer, cost-analyst, debugger, orchestrator, permission-analyst, planner, reviewer, scout. Use via Task tool for subagent dispatch.",
+      "priority": 90
+    },
+    {
+      "name": "pro-workflow-rules",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "rules",
+      "install_each_subdir": false,
+      "target_name": "proworkflow-rules",
+      "description": "Pro Workflow rules — curated rule sets for AI coding conventions.",
+      "priority": 85
+    },
+    {
+      "name": "pro-workflow-references",
+      "url": "https://github.com/rohitg00/pro-workflow.git",
+      "branch": "main",
+      "prefix": "",
+      "source_path": "references",
+      "install_each_subdir": false,
+      "target_name": "proworkflow-references",
+      "description": "Pro Workflow references — deep-dive technical references for advanced patterns.",
+      "priority": 80
+    },
+    {
       "name": "raintree-claude-starter",
       "url": "https://github.com/raintree-technology/claude-starter.git",
       "branch": "main",
