@@ -159,7 +159,7 @@
     {
       "name": "artubss-skills",
       "url": "https://github.com/artubss/SKILLS-CLAUDE-CODE.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "artubss-",
       "source_path": "skills/skills",
       "install_each_subdir": true,
@@ -169,7 +169,7 @@
     {
       "name": "artubss-favorites",
       "url": "https://github.com/artubss/SKILLS-CLAUDE-CODE.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "",
       "source_path": "favorites",
       "install_each_subdir": false,
@@ -180,7 +180,7 @@
     {
       "name": "artubss-plugins",
       "url": "https://github.com/artubss/SKILLS-CLAUDE-CODE.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "",
       "source_path": "claude-skills-main/claude-skills-main/plugins",
       "install_each_subdir": false,
@@ -213,7 +213,7 @@
     {
       "name": "composio-skills",
       "url": "https://github.com/ComposioHQ/awesome-claude-skills.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "composio-",
       "source_path": "",
       "install_each_subdir": true,
@@ -321,7 +321,7 @@
     {
       "name": "sociilabs-content-writer",
       "url": "https://github.com/sociilabs/claude-content-writer.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "",
       "source_path": "",
       "install_each_subdir": false,
@@ -430,7 +430,7 @@
     {
       "name": "godot-prompter",
       "url": "https://github.com/jame581/GodotPrompter.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "godot-prompter-",
       "source_path": "",
       "install_each_subdir": true,
@@ -485,7 +485,7 @@
     {
       "name": "godogen",
       "url": "https://github.com/htdt/godogen.git",
-      "branch": "main",
+      "branch": "master",
       "prefix": "godogen-",
       "source_path": "",
       "install_each_subdir": true,
